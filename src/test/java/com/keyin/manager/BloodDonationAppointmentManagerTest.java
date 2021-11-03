@@ -60,11 +60,18 @@ public class BloodDonationAppointmentManagerTest {
 
         ArrayList<AppointmentSlot> appointmentSlots = new ArrayList<AppointmentSlot>();
 
+        AppointmentSlot appointmentSlotTypeA = new AppointmentSlot();
+        appointmentSlotTypeA.setId(1);
+        appointmentSlotTypeA.setLocation("123 Water St. st. John's NL");
+        appointmentSlotTypeA.setBloodType("A");
+        appointmentSlots.add(appointmentSlotTypeA);
+
         AppointmentSlot appointmentSlot = new AppointmentSlot();
         appointmentSlot.setId(1);
         appointmentSlot.setLocation("123 Water St. st. John's NL");
         appointmentSlot.setBloodType("B");
         appointmentSlots.add(appointmentSlot);
+
 
         Mockito.when(mockDatabase.getAppointmentSlots()).thenReturn(appointmentSlots);
 
